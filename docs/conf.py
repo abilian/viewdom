@@ -5,7 +5,7 @@ copyright = '2020, Paul Everitt <pauleveritt@me.com>'
 # author = 'Paul Everitt <pauleveritt@me.com>'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = '0.2.0'
 
 # -- General configuration ---------------------------------------------------
 

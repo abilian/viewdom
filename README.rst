@@ -4,7 +4,7 @@ viewdom
 `Docs <https://viewdom.readthedocs.io/en/latest/>`_ and `Code <https://github.com/pauleveritt/viewdom>`_
 
 
-``viewdom``` brings modern frontend templating patterns to Python:
+``viewdom`` brings modern frontend templating patterns to Python:
 
 - `tagged <https://github.com/jviide/tagged>`_ to have language-centered templating (like JS tagged templates)
 - `htm.py <https://github.com/jviide/htm.py>`_ to generate virtual DOM structures from a template run (like the `htm` JS package)
