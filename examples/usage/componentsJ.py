@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Iterable
 
 from viewdom import html, render
-from viewdom.h import H
+from viewdom.protocols import VDOM
 
 title = 'My Todos'
 
@@ -15,7 +15,7 @@ def Todo(label):
 class TodoList:
     todos: Iterable
 
-    def __call__(self) -> H:
+    def __call__(self) -> VDOM:
         return html('<ul>{[Todo(label) for label in self.todos]}</ul>')
 
 

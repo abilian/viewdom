@@ -3,8 +3,8 @@ from collections import namedtuple, ChainMap
 from collections.abc import Iterable, ByteString
 from inspect import signature, Parameter
 
-from markupsafe import escape
 from htm import htm
+from markupsafe import escape
 
 H = namedtuple("H", ["tag", "props", "children"])
 
@@ -64,7 +64,6 @@ def render_gen(value):
                 yield f'/>'
         elif item not in (True, False, None):
             yield escape(item)
-
 
 
 def encode_prop(k, v):
