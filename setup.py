@@ -1,3 +1,4 @@
+# type: ignore
 from setuptools import setup, find_packages
 
 
@@ -9,7 +10,11 @@ def readfile(name):
 readme = readfile('README.rst')
 changes = readfile('CHANGES.rst')
 
-requires = ['htm', 'MarkupSafe']
+requires = [
+    'htm',
+    'MarkupSafe',
+    'typing_extensions>=3.7.4;python_version<"3.8"'
+]
 
 docs_require = [
     'Sphinx',
@@ -43,6 +48,7 @@ setup(
     url='https://viewdom.readthedocs.io',
     packages=find_packages('src', exclude=['tests']),
     package_dir={'': 'src'},
+    package_data={"viewdom": ["py.typed"]},
     include_package_data=True,
     python_requires='>=3.6',
     install_requires=requires,
