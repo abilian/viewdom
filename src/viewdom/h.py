@@ -15,6 +15,10 @@ def flatten(value):
     if isinstance(value, Iterable) and not isinstance(value, (H, str, ByteString)):
         for item in value:
             yield from flatten(item)
+    elif callable(value):
+        # E.g. a dataclass with an __call__
+        vdom = value()
+        yield vdom
     else:
         yield value
 
