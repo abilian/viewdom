@@ -17,6 +17,7 @@ def TodoApp(title, todolist):
 
 def main():
     todos = ['first']
+    # noinspection PyUnusedLocal
     todo_list = TodoList(todos)
     return render(html('''
       <{TodoApp} title="My Todos" todolist={todo_list} />

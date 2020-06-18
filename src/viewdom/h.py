@@ -1,18 +1,29 @@
+from __future__ import annotations
+
 import threading
-from collections import namedtuple, ChainMap
+from collections import ChainMap
 from collections.abc import Iterable, ByteString
+from dataclasses import dataclass
 from inspect import signature, Parameter
+from typing import Union, Mapping, List
 
 from htm import htm
 from markupsafe import escape
 
-H = namedtuple("H", ["tag", "props", "children"])
 
-html = htm(H)
+@dataclass(frozen=True)
+class VDOM:
+    __slots__ = ['tag', 'props', 'children']
+    tag: str
+    props: Mapping
+    children: List[Union[str, VDOM]]
+
+
+html = htm(VDOM)
 
 
 def flatten(value):
-    if isinstance(value, Iterable) and not isinstance(value, (H, str, ByteString)):
+    if isinstance(value, Iterable) and not isinstance(value, (VDOM, str, ByteString)):
         for item in value:
             yield from flatten(item)
     elif callable(value):
@@ -40,14 +51,14 @@ def relaxed_call(callable_, **kwargs):
     return callable_(**kwargs)
 
 
-def render(value, **kwargs):
+def render(value: VDOM, **kwargs):
     return "".join(render_gen(Context(value, **kwargs)))
 
 
 def render_gen(value):
     for item in flatten(value):
-        if isinstance(item, H):
-            tag, props, children = item
+        if isinstance(item, VDOM):
+            tag, props, children = item.tag, item.props, item.children
             if callable(tag):
                 yield from render_gen(relaxed_call(tag, children=children, **props))
                 continue

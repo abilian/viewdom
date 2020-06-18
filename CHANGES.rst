@@ -1,12 +1,15 @@
 Changelog
 =========
 
+0.4.0
+=====
+
+- Switch to a dataclass (frozen, slots) data structure for VDOMs, making it easy to assign type hints, do autocomplete, and have mypy get involved.
+
 0.3.0
 =====
 
-- Allow callables subcomponents, e.g. dataclasses with an ``__call__``, to be rendered in ``html()`` calls
-
-- Put ``H`` in the top-level exports
+- Allow callable subcomponents, e.g. dataclasses with an ``__call__``, to be rendered in ``html()`` calls
 
 0.2.0
 =====
