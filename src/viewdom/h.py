@@ -51,7 +51,7 @@ def relaxed_call(callable_, **kwargs):
     return callable_(**kwargs)
 
 
-def render(value: VDOM, **kwargs):
+def render(value: VDOM, **kwargs) -> str:
     return "".join(render_gen(Context(value, **kwargs)))
 
 
