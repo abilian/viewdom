@@ -6,6 +6,8 @@ Changelog
 
 - Switch to a dataclass (frozen, slots) data structure for VDOMs, making it easy to assign type hints, do autocomplete, and have mypy get involved.
 
+- Add more examples and docs
+
 0.3.0
 =====
 

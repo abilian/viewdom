@@ -40,7 +40,7 @@ setup(
     description=(
         'View layer for Python VDOMs'
     ),
-    version='0.3.0',
+    version='0.4.0',
     long_description=readme + '\n\n' + changes,
     long_description_content_type='text/x-rst',
     author='Paul Everitt',
