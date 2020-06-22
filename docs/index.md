@@ -20,7 +20,17 @@ Installation follows the normal Python packaging approach:
 
 ## Quick Examples
 
-Use `html` to generate a VDOM, then `render` to convert to a string:
+In the ``htm.py`` approach, you generate a VDOM and then convert that to a string.
+``viewdom`` does the latter, ``htm.py`` does the former, via a bound ``html`` function in ``viewdom``.
+Let's first generate a VDOM:
+
+```{literalinclude} ../examples/index/vdom.py
+---
+start-after: start-after
+---
+```
+
+This time we'll do both in one line: use `html` to generate a VDOM, then `render` to convert to a string:
 
 ```{literalinclude} ../examples/index/render.py
 ---
@@ -43,6 +53,15 @@ Insert variables from the local or global scope:
 start-after: start-after
 ---
 ```
+
+Use HTML attributes as "props" which can have values or even expressions:
+
+```{literalinclude} ../examples/index/props.py
+---
+start-after: start-after
+---
+```
+
 
 Expressions aren't some special language, it's just Python in inside curly braces:
 
@@ -87,6 +106,14 @@ start-after: start-after
 Reusable components and subcomponents, passing props and children:
 
 ```{literalinclude} ../examples/index/components.py
+---
+start-after: start-after
+---
+```
+
+If your component is a callable instance, ``viewdom`` can detect that and call it:
+
+```{literalinclude} ../examples/index/callable.py
 ---
 start-after: start-after
 ---

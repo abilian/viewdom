@@ -21,7 +21,7 @@ Let's look at a variation of this, where we take the intermediate step of lookin
 :end-before: end-before
 ```
 
-As the comment shows, we get back a Python `namedtuple` with:
+As the comment shows, we get back a `VDOM` -- an optimized dataclass -- with:
 
 - The name of the "tag" (`<div>`)
 
