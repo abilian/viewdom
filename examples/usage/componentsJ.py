@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Iterable
 
 from viewdom import html, render
-from viewdom import VDOM
+from viewdom.h import VDOM
 
 title = 'My Todos'
 

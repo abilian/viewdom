@@ -1,29 +1,51 @@
 from __future__ import annotations
 
+import functools
 import threading
 from collections import ChainMap
 from collections.abc import Iterable, ByteString
 from dataclasses import dataclass
 from inspect import signature, Parameter
-from typing import Union, Mapping, List
+from typing import Union, Mapping, List, Callable, Tuple
 
-from htm import htm
+from htm import htm_parse, htm_eval
 from markupsafe import escape
+from tagged import tag
 
 
 @dataclass(frozen=True)
-class VDOM:
+class VDOMNode:
     __slots__ = ['tag', 'props', 'children']
     tag: str
     props: Mapping
-    children: List[Union[str, VDOM]]
+    children: List[Union[str, VDOMNode]]
 
 
-html = htm(VDOM)
+VDOM = Tuple[VDOMNode, ...]
+
+
+def htm(func=None, *, cache_maxsize=128) -> Callable[[str], VDOM]:
+    cached_parse = functools.lru_cache(maxsize=cache_maxsize)(htm_parse)
+
+    def _htm(h):
+        @tag
+        @functools.wraps(h)
+        def __htm(strings, values):
+            ops = cached_parse(strings)
+            return htm_eval(h, ops, values)
+
+        return __htm
+
+    if func is not None:
+        return _htm(func)
+    return _htm
+
+
+html = htm(VDOMNode)
 
 
 def flatten(value):
-    if isinstance(value, Iterable) and not isinstance(value, (VDOM, str, ByteString)):
+    if isinstance(value, Iterable) and not isinstance(value, (VDOMNode, str, ByteString)):
         for item in value:
             yield from flatten(item)
     elif callable(value):
@@ -57,7 +79,7 @@ def render(value: VDOM, **kwargs) -> str:
 
 def render_gen(value):
     for item in flatten(value):
-        if isinstance(item, VDOM):
+        if isinstance(item, VDOMNode):
             tag, props, children = item.tag, item.props, item.children
             if callable(tag):
                 yield from render_gen(relaxed_call(tag, children=children, **props))

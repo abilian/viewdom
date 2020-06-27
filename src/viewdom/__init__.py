@@ -1,4 +1,4 @@
-from viewdom.h import html, render, use_context, Context, VDOM
+from viewdom.h import html, render, use_context, Context, VDOMNode, VDOM
 
 __version__ = '0.4.0'
 
@@ -7,5 +7,6 @@ __all__ = [
     'render',
     'use_context',
     'Context',
+    'VDOMNode',
     'VDOM',
 ]

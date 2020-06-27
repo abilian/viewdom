@@ -1,6 +1,6 @@
-from viewdom import VDOM
+from viewdom import VDOMNode
 
-expected = VDOM(tag='div', props={}, children=['Hello World'])
+expected = VDOMNode(tag='div', props={}, children=['Hello World'])
 
 # start-after
 from viewdom import html
