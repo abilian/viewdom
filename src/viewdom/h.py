@@ -6,7 +6,7 @@ from collections import ChainMap
 from collections.abc import Iterable, ByteString
 from dataclasses import dataclass
 from inspect import signature, Parameter
-from typing import Union, Mapping, List, Callable, Tuple
+from typing import Union, Mapping, List, Callable
 
 from htm import htm_parse, htm_eval
 from markupsafe import escape
@@ -21,7 +21,7 @@ class VDOMNode:
     children: List[Union[str, VDOMNode]]
 
 
-VDOM = Tuple[VDOMNode, ...]
+VDOM = Union[List[VDOMNode], VDOMNode]
 
 
 def htm(func=None, *, cache_maxsize=128) -> Callable[[str], VDOM]:
