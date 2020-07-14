@@ -4,8 +4,7 @@ Changelog
 Unreleased
 ==========
 
-- Change typing: ``VDOM`` is now the tuple at the top, ``VDOMNode`` is the factory and an individual triple
-
+- Change typing: ``VDOM`` is now the list/node at the top, ``VDOMNode`` is the factory and an individual triple
 
 0.4.0
 =====
