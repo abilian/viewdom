@@ -1,6 +1,7 @@
 from viewdom import html, render
 
 
+# start-after
 def Todos():
     for todo in ["First", "Second"]:
         yield html('<li>{todo}</li>')

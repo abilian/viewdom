@@ -1,6 +1,7 @@
 from viewdom import html, render
 
 
+# start-after
 def Heading(children):
     return html('<h1>My Title</h1><div>{children}</div>')
 

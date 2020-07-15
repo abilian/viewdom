@@ -6,10 +6,6 @@
 
     - Blocks/slots, including super() and nested
     
-    - Passing a component
-    
-    - Conditional rendering of component, e.g. {Nav1 if Nav1 else Nav2}
-    
     - Doctype
     
 - Performance comparisons

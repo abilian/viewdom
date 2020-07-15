@@ -28,6 +28,7 @@ As you can see from the comment, the VDOM now has something special in it: a VDO
 If your template has children inside that tag, your component can ask for them as an argument, then place them as a variable:
 
 ```{literalinclude} ../../examples/usage/componentsA.py
+:start-after: start-after
 :end-before: end-before
 ```
 
@@ -39,26 +40,53 @@ Here we pass a `title` as an argument to `Heading`, using a simple HTML attribut
 The "prop" can also be a Python symbol, using curly braces as the attribute value:
 
 ```{literalinclude} ../../examples/usage/componentsC.py
+:start-after: start-after
 :end-before: end-before
 ```
 
 That prop value can also be an in-scope variable:
 
 ```{literalinclude} ../../examples/usage/componentsD.py
+:start-after: start-after
 :end-before: end-before
 ```
 
 Since this is typical function-argument stuff, you can have optional props through argument defaults:
 
 ```{literalinclude} ../../examples/usage/componentsE.py
+:start-after: start-after
 :end-before: end-before
 ```
 
-You can combined different props and arguments.
+Here's a useful pattern: you can pass a component as a "prop" to another component.
+This lets the caller -- in this case, the `result` line -- do the driving:
+
+```{literalinclude} ../../examples/usage/componentsPassComponent.py
+:start-after: start-after
+:end-before: end-before
+```
+
+As a variation, let the caller do the driving but make the prop default to a default component if none was provided:
+
+```{literalinclude} ../../examples/usage/componentsPassComponentB.py
+:start-after: start-after
+:end-before: end-before
+```
+
+One final variation: move the "default or passed-in" decision into the template itself:
+
+```{literalinclude} ../../examples/usage/componentsPassComponentC.py
+:emphasize-lines: 10-11
+:start-after: start-after
+:end-before: end-before
+```
+
+You can combine different props and arguments.
 In this case, `title` is a prop.
 `children` is another argument, but is provided automatically by `render`.
 
 ```{literalinclude} ../../examples/usage/componentsF.py
+:start-after: start-after
 :end-before: end-before
 ```
 
@@ -67,6 +95,7 @@ For example, imagine you have a todo list.
 There might be a lot of todos, so you want to generate them in a memory-efficient way:
 
 ```{literalinclude} ../../examples/usage/componentsG.py
+:start-after: start-after
 :end-before: end-before
 ```
 
@@ -74,6 +103,7 @@ Subcomponents are also feasible.
 They make up part of both the VDOM and the rendering:
 
 ```{literalinclude} ../../examples/usage/componentsH.py
+:start-after: start-after
 :end-before: end-before
 ```
 

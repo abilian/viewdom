@@ -21,6 +21,9 @@ from examples.usage import (
     componentsB,
     componentsC,
     componentsE,
+    componentsPassComponent,
+    componentsPassComponentB,
+    componentsPassComponentC,
     componentsF,
     componentsG,
     componentsH,
@@ -54,6 +57,9 @@ from examples.usage import (
         componentsB,
         componentsC,
         componentsE,
+        componentsPassComponent,
+        componentsPassComponentB,
+        componentsPassComponentC,
         componentsF,
         componentsG,
         componentsH,
@@ -64,4 +70,4 @@ from examples.usage import (
     ]
 )
 def test_docs_usage(target):
-    assert target.result == target.expected
+    assert target.expected == target.result

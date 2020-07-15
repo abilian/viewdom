@@ -1,6 +1,7 @@
 from viewdom import html, render
 
 
+# start-after
 def Heading(title):
     return html('<h1>{title}</h1>')
 
