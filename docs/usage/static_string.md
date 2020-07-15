@@ -62,3 +62,10 @@ Thus, instead of `editable="1"` you just get the attribute *name* without a *val
 ```{literalinclude} ../../examples/usage/static_stringE.py
 :end-before: end-before
 ```
+
+One last point: the HTML doctype is a tricky one to get into the template itself as its syntax is brackety like tags.
+Instead, define it as a variable using `markupsafe.Markup` and insert the variable into the template:
+
+```{literalinclude} ../../examples/usage/static_stringDoctype.py
+:end-before: end-before
+```

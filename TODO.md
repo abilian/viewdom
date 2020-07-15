@@ -5,9 +5,7 @@
 - Add examples:
 
     - Blocks/slots, including super() and nested
-    
-    - Doctype
-    
+        
 - Performance comparisons
 
 - Get mypy better integrated (pytest, plugin)
