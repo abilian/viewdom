@@ -4,8 +4,6 @@
 
 - Add examples:
 
-    - More about children
-    
     - Blocks/slots, including super() and nested
     
     - Passing a component
@@ -17,3 +15,5 @@
 - Performance comparisons
 
 - Get mypy better integrated (pytest, plugin)
+
+- Remove py.typed

@@ -31,7 +31,7 @@ If your template has children inside that tag, your component can ask for them a
 :end-before: end-before
 ```
 
-Note how the component closes with `<//>` when it contains nested children, as opposed to the self-closing form in the first example.
+`children` is a keyword argument that is available to components. Note how the component closes with `<//>` when it contains nested children, as opposed to the self-closing form in the first example.
 
 As expected, components can have props, passed as what looks like HTML attributes.
 Here we pass a `title` as an argument to `Heading`, using a simple HTML attribute string value:
