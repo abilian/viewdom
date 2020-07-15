@@ -2,6 +2,7 @@ import pytest
 
 from examples.usage import (
     static_string,
+    static_stringLiteral,
     static_stringA,
     static_stringB,
     static_stringC,
@@ -39,6 +40,7 @@ from examples.usage import (
     'target',
     [
         static_string,
+        static_stringLiteral,
         static_stringA,
         static_stringB,
         static_stringC,

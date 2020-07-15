@@ -1,6 +1,14 @@
 # Static Strings
 
-Let's start with the simplest form of templating: nothing dynamic, just "template" a string of HTML:
+Let's start with the simplest form of templating: just a string, no tags, no attributes:
+
+```{literalinclude} ../../examples/usage/static_stringLiteral.py
+:end-before: end-before
+```
+
+For the purposes of illustration, we do the VDOM in one step and the rendering in a second.
+
+Same thing, but in a `<div>`: nothing dynamic, just "template" a string of HTML, but done in one step:
 
 ```{literalinclude} ../../examples/usage/static_string.py
 :end-before: end-before
@@ -15,7 +23,7 @@ The `render` function, imported from `vdom`, does the rendering.
 Which we then do to get a result.
 The rendered result matches the comment at the end.
 
-Let's look at a variation of this, where we take the intermediate step of looking at the VDOM:
+Let's try that again, looking at the VDOM:
 
 ```{literalinclude} ../../examples/usage/static_stringA.py
 :end-before: end-before
