@@ -33,6 +33,7 @@ from examples.usage import (
     componentsJ,
     context,
     contextA,
+    spread,
 )
 
 
@@ -71,6 +72,7 @@ from examples.usage import (
         componentsJ,
         context,
         contextA,
+        spread,
     ]
 )
 def test_docs_usage(target):

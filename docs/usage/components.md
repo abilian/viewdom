@@ -58,6 +58,14 @@ Since this is typical function-argument stuff, you can have optional props throu
 :end-before: end-before
 ```
 
+Sometimes you just want to pass everything in a dict as props.
+In JS, this is known as the "spread operator" and is supported:
+
+```{literalinclude} ../../examples/usage/spread.py
+:start-after: start-after
+:end-before: end-before
+```
+
 Here's a useful pattern: you can pass a component as a "prop" to another component.
 This lets the caller -- in this case, the `result` line -- do the driving:
 
