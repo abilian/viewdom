@@ -36,7 +36,7 @@ def test_render_context():
 """)
     result = render(vdom)
     expected = '<div>c1</div><h2>Functional components!</h2><span>c1</span>'
-    assert result == expected
+    assert expected == result
 
 
 def test_render_escaped_value():
@@ -44,7 +44,7 @@ def test_render_escaped_value():
     vdom = html('<div>{body}</div>')
     result = render(vdom)
     expected = '<div>&lt;span&gt;Escape&lt;/span&gt;</div>'
-    assert result == expected
+    assert expected == result
 
 
 def test_render_safe_value():
@@ -52,4 +52,32 @@ def test_render_safe_value():
     vdom = html('<div>{body}</div>')
     result = render(vdom)
     expected = '<div><span>Escape</span></div>'
-    assert result == expected
+    assert expected == result
+
+
+def test_void():
+    """ Convert <img></img> to <img/>
+
+    See this for discussion of non-void elements which can't be
+    self-closed:
+    https://stackoverflow.com/questions/31627593/html-validator-self-closing-syntax-and-non-void-errors
+    """
+
+    non_void = '<img></img>'
+    vdom = html(non_void)
+    result = render(vdom)
+    assert '<img/>' == result
+
+
+def test_non_void():
+    """ Don't convert <i class="icon"></i> to <i class="icon"/>
+
+    See this for discussion of non-void elements which can't be
+    self-closed:
+    https://stackoverflow.com/questions/31627593/html-validator-self-closing-syntax-and-non-void-errors
+    """
+
+    non_void = '<i class="icon"></i>'
+    vdom = html(non_void)
+    result = render(vdom)
+    assert non_void == result

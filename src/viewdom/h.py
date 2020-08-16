@@ -12,6 +12,11 @@ from htm import htm_parse, htm_eval
 from markupsafe import escape
 from tagged import tag
 
+# "void" elements are allowed to be self-closing
+# https://html.spec.whatwg.org/multipage/syntax.html#void-elements
+VOIDS = ('area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen',
+         'link', 'meta', 'param', 'source', 'track', 'wbr')
+
 
 @dataclass(frozen=True)
 class VDOMNode:
@@ -93,8 +98,10 @@ def render_gen(value):
                 yield ">"
                 yield from render_gen(children)
                 yield f'</{escape(tag)}>'
-            else:
+            elif tag.lower() in VOIDS:
                 yield f'/>'
+            else:
+                yield f'></{tag}>'
         elif item not in (True, False, None):
             yield escape(item)
 

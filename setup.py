@@ -11,6 +11,7 @@ readme = readfile('README.rst')
 changes = readfile('CHANGES.rst')
 
 requires = [
+    'tagged',
     'htm',
     'MarkupSafe',
     'typing_extensions>=3.7.4;python_version<"3.8"'
