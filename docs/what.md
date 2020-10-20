@@ -1,7 +1,7 @@
 # What Is It
 
 In web development, modern frontends have a different model for views and templating than Python.
-Architecturally, they use "Virtual DOMs" (VDOMs) which are then update the real DOM.
+Architecturally, they use "Virtual DOMs" (VDOMs) which then update the real DOM.
 
 To the programmer, many of them adopt a component-oriented model with lots of tiny pieces, "single responsibility principle", isolation, reuse, and rich ways of getting data into the component for rendering.
 Equally, rather than treat templating as separate from programming, they mix "templating" together with programming.

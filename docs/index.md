@@ -103,7 +103,7 @@ start-after: start-after
 ---
 ```
 
-Reusable components and subcomponents, passing props and children:
+Reusable components and subcomponents, passing in props and children as arguments:
 
 ```{literalinclude} ../examples/index/components.py
 ---
