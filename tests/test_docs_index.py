@@ -32,8 +32,8 @@ from examples.index import (
         looping,
         components,
         callable,
-        context
-    ]
+        context,
+    ],
 )
 def test_docs_index(target):
     assert target.expected == target.result

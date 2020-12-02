@@ -14,8 +14,23 @@ from tagged import tag
 
 # "void" elements are allowed to be self-closing
 # https://html.spec.whatwg.org/multipage/syntax.html#void-elements
-VOIDS = ('area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen',
-         'link', 'meta', 'param', 'source', 'track', 'wbr')
+VOIDS = (
+    'area',
+    'base',
+    'br',
+    'col',
+    'embed',
+    'hr',
+    'img',
+    'input',
+    'keygen',
+    'link',
+    'meta',
+    'param',
+    'source',
+    'track',
+    'wbr',
+)
 
 
 @dataclass(frozen=True)
@@ -50,7 +65,9 @@ html = htm(VDOMNode)
 
 
 def flatten(value):
-    if isinstance(value, Iterable) and not isinstance(value, (VDOMNode, str, ByteString)):
+    if isinstance(value, Iterable) and not isinstance(
+        value, (VDOMNode, str, ByteString)
+    ):
         for item in value:
             yield from flatten(item)
     elif callable(value):
@@ -71,7 +88,11 @@ def relaxed_call(callable_, **kwargs):
             extra_key += "_"
 
         sig = sig.replace(
-            parameters=[*parameters.values(), Parameter(extra_key, Parameter.VAR_KEYWORD)])
+            parameters=[
+                *parameters.values(),
+                Parameter(extra_key, Parameter.VAR_KEYWORD),
+            ]
+        )
         kwargs = dict(sig.bind(**kwargs).arguments)
         kwargs.pop(extra_key, None)
 
@@ -87,12 +108,15 @@ def render_gen(value):
         if isinstance(item, VDOMNode):
             tag, props, children = item.tag, item.props, item.children
             if callable(tag):
-                yield from render_gen(relaxed_call(tag, children=children, **props))
+                yield from render_gen(
+                    relaxed_call(tag, children=children, **props)
+                )
                 continue
 
             yield f"<{escape(tag)}"
             if props:
-                yield f" {' '.join(encode_prop(k, v) for (k, v) in props.items())}"
+                pi = props.items()
+                yield f" {' '.join(encode_prop(k, v) for (k, v) in pi)}"
 
             if children:
                 yield ">"

@@ -73,7 +73,7 @@ from examples.usage import (
         context,
         contextA,
         spread,
-    ]
+    ],
 )
 def test_docs_usage(target):
     assert target.expected == target.result
