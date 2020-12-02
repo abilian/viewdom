@@ -20,21 +20,27 @@ def Main(page):
 
 
 def App(page):
-    return html('''
+    return html(
+        '''
         <{Nav}/>
         <{Main} page={page}/>
-    ''')
+    '''
+    )
 
 
 def main():
     site = dict(title='My Site')
     page = dict(title='My Page')
 
-    return render(html('''
+    return render(
+        html(
+            '''
         <{Context} site={site}>
             <{App} page={page} />
         <//>
-'''))
+'''
+        )
+    )
 
 
 result = main()

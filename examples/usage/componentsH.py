@@ -14,10 +14,14 @@ def TodoList(todos):
 
 def main():
     todos = ['first']
-    return render(html('''
+    return render(
+        html(
+            '''
       <h1>{title}</h1>
       <{TodoList} todos={todos} />
-    '''))
+    '''
+        )
+    )
 
 
 result = main()

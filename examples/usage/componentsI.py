@@ -20,9 +20,13 @@ def main():
     todos = ['first']
     # noinspection PyUnusedLocal
     todo_list = TodoList(todos)
-    return render(html('''
+    return render(
+        html(
+            '''
       <{TodoApp} title="My Todos" todolist={todo_list} />
-    '''))
+    '''
+        )
+    )
 
 
 result = main()

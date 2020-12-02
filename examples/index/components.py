@@ -15,8 +15,12 @@ def TodoList(todos):
     return html('<ul>{[Todo(label) for label in todos]}</ul>')
 
 
-result = render(html('''
+result = render(
+    html(
+        '''
   <h1>{title}</h1>
   <{TodoList} todos={todos} />
-'''))
+'''
+    )
+)
 # '<h1>My Todos</h1><ul><li>first</li></ul>'
