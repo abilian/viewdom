@@ -52,7 +52,9 @@ Insert variables from the local or global scope:
 
 ```{literalinclude} ../examples/index/scope.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 3-3
 ---
 ```
 
@@ -60,7 +62,8 @@ Use HTML attributes as "props" which can have values or even expressions:
 
 ```{literalinclude} ../examples/index/props.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
 ---
 ```
 
@@ -69,7 +72,9 @@ Expressions aren't some special language, it's just Python in inside curly brace
 
 ```{literalinclude} ../examples/index/expressions.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 4-4
 ---
 ```
 
@@ -77,7 +82,9 @@ Strings with markup get escaped by `markupsafe`:
 
 ```{literalinclude} ../examples/index/escaping.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 3-3
 ---
 ```
 
@@ -85,7 +92,9 @@ But you can flag a string as safe using `markupsafe.Markup`:
 
 ```{literalinclude} ../examples/index/prevent_escaping.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 2-2
 ---
 ```
 
@@ -93,7 +102,9 @@ Rendering something conditionally is also "just Python":
 
 ```{literalinclude} ../examples/index/conditional.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 8-8
 ---
 ```
 
@@ -101,7 +112,9 @@ Looping? Yes, "just Python":
 
 ```{literalinclude} ../examples/index/looping.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 9-12
 ---
 ```
 
@@ -109,7 +122,8 @@ Reusable components and subcomponents, passing in props and children as argument
 
 ```{literalinclude} ../examples/index/components.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
 ---
 ```
 
@@ -117,7 +131,9 @@ If your component is a callable instance, ``viewdom`` can detect that and call i
 
 ```{literalinclude} ../examples/index/callable.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 7-8
 ---
 ```
 
@@ -125,7 +141,9 @@ Tired of passing props down a deep tree and want something like React context/ho
 
 ```{literalinclude} ../examples/index/context.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 7-7, 18-18
 ---
 ```
 
@@ -140,5 +158,5 @@ hidden: true
 what
 why
 how
-usage/index
+examples/index
 ```

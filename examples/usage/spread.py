@@ -1,3 +1,7 @@
+"""
+Mimic ES6 spread operator to destructure props.
+"""
+
 from viewdom import html, render
 
 

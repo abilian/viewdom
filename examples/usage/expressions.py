@@ -1,3 +1,7 @@
+"""
+Simple arithmetic expression in a template.
+"""
+
 from viewdom import html, render
 
 name = 'viewdom'

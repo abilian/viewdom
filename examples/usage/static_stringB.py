@@ -1,8 +1,15 @@
-from viewdom import html, render
+"""
+Show the VDOM itself.
+"""
 
-vdom = html('<div class="container">Hello World</div>')
-result = render(vdom)
-expected = '<div class="container">Hello World</div>'
+from viewdom import html, VDOMNode
+
+result = html('<div class="container">Hello World</div>')
+expected = VDOMNode(
+    tag='div',
+    props={'class': 'container'},
+    children=['Hello World']
+)
 
 
 def test():

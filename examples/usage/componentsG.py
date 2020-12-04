@@ -1,3 +1,7 @@
+"""
+Generators as components.
+"""
+
 from viewdom import html, render
 
 

@@ -1,3 +1,7 @@
+"""
+Markup can be inserted when wrapped with a helper.
+"""
+
 from markupsafe import Markup
 
 from viewdom import html, render

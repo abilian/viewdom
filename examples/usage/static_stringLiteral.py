@@ -1,3 +1,7 @@
+"""
+Render just a string literal.
+"""
+
 from viewdom import html, render
 
 vdom = html('Hello World')

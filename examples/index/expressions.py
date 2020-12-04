@@ -1,3 +1,7 @@
+"""
+Use Python expressions inside the curly brackets, like f-strings do.
+"""
+
 from viewdom import html, render
 
 name = 'viewdom'

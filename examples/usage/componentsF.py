@@ -1,3 +1,7 @@
+"""
+Children as props.
+"""
+
 from viewdom import html, render
 
 

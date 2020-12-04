@@ -7,5 +7,7 @@ They're also a common part of Python f-strings, because...well, Python has condi
 Here's a simple example using a Python "ternary":
 
 ```{literalinclude} ../../examples/usage/conditional.py
-:end-before: end-before
+---
+end-before: def test
+---
 ```

@@ -1,3 +1,7 @@
+"""
+Pass a Python symbol as part of an expression.
+"""
+
 from viewdom import html, render
 
 

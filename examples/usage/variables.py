@@ -1,3 +1,7 @@
+"""
+Simple example of inserting a variable value into a template.
+"""
+
 from viewdom import html, render
 
 name = 'viewdom'

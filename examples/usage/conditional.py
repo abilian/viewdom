@@ -1,3 +1,7 @@
+"""
+Use normal Python syntax for conditional rendering in a template.
+"""
+
 from viewdom import html, render
 
 message = 'Say Howdy'

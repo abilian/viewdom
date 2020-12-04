@@ -1,3 +1,7 @@
+"""
+Simple looping using list comprehension.
+"""
+
 from viewdom import html, render
 
 message = 'Hello'

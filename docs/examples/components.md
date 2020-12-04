@@ -19,104 +19,182 @@ The whole mechanism, though, is quite magical:
 `viewdom`, courtesy of `htm.py`, makes this more Pythonic through the use of "components".
 Instead of some sorta-callable, a component is a normal Python callable -- e.g. a function -- with normal Python arguments and return values.
 
+## Simple Heading
+
+Here is a callable -- a function -- which returns a VDOM:
+
 ```{literalinclude} ../../examples/usage/components.py
-:end-before: end-before
+---
+start-at: from viewdom
+end-before: def test
+---
 ```
 
-As you can see from the comment, the VDOM now has something special in it: a VDOM with callable function `Heading` and props/children, rather than the rendering.
+## Component in VDOM
 
-If your template has children inside that tag, your component can ask for them as an argument, then place them as a variable:
+The VDOM now has something special in it: a callable as the "tag", rather than a string such as ``<div>``.
 
-```{literalinclude} ../../examples/usage/componentsA.py
-:start-after: start-after
-:end-before: end-before
+```{literalinclude} ../../examples/usage/components_vdom.py
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 8-8
+---
 ```
 
-`children` is a keyword argument that is available to components. Note how the component closes with `<//>` when it contains nested children, as opposed to the self-closing form in the first example.
+## Simple Props
 
 As expected, components can have props, passed as what looks like HTML attributes.
 Here we pass a `title` as an argument to `Heading`, using a simple HTML attribute string value:
 
+```{literalinclude} ../../examples/usage/componentsB.py
+---
+start-after: from viewdom
+end-before: def test
+---
+```
+
+
+## Children As Props
+
+If your template has children inside that tag, your component can ask for them as an argument, then place them as a variable:
+
+```{literalinclude} ../../examples/usage/componentsA.py
+---
+start-after: from viewdom
+end-before: def test
+---
+```
+
+`children` is a keyword argument that is available to components. 
+Note how the component closes with `<//>` when it contains nested children, as opposed to the self-closing form in the first example.
+
+## Expressions as Prop Values
+
 The "prop" can also be a Python symbol, using curly braces as the attribute value:
 
 ```{literalinclude} ../../examples/usage/componentsC.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 8-8
+---
 ```
+
+## Prop Values from Scope Variables
 
 That prop value can also be an in-scope variable:
 
 ```{literalinclude} ../../examples/usage/componentsD.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 8-8
+---
 ```
+
+## Optional Props
 
 Since this is typical function-argument stuff, you can have optional props through argument defaults:
 
 ```{literalinclude} ../../examples/usage/componentsE.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 3-3
+---
 ```
+
+## Spread Props
 
 Sometimes you just want to pass everything in a dict as props.
 In JS, this is known as the "spread operator" and is supported:
 
 ```{literalinclude} ../../examples/usage/spread.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 8-8
+---
 ```
+
+## Pass Component as Prop
 
 Here's a useful pattern: you can pass a component as a "prop" to another component.
 This lets the caller -- in this case, the `result` line -- do the driving:
 
 ```{literalinclude} ../../examples/usage/componentsPassComponent.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 14-14
+---
 ```
+
+## Default Component for Prop
 
 As a variation, let the caller do the driving but make the prop default to a default component if none was provided:
 
 ```{literalinclude} ../../examples/usage/componentsPassComponentB.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 11-11
+---
 ```
+
+## Conditional Default
 
 One final variation: move the "default or passed-in" decision into the template itself:
 
 ```{literalinclude} ../../examples/usage/componentsPassComponentC.py
-:emphasize-lines: 10-11
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 12-12
+---
 ```
+
+## Children as Prop
 
 You can combine different props and arguments.
 In this case, `title` is a prop.
 `children` is another argument, but is provided automatically by `render`.
 
 ```{literalinclude} ../../examples/usage/componentsF.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+emphasize-lines: 3-3
+---
 ```
+
+## Generators as Components
 
 You can also have components that act as generators.
 For example, imagine you have a todo list.
 There might be a lot of todos, so you want to generate them in a memory-efficient way:
 
 ```{literalinclude} ../../examples/usage/componentsG.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+---
 ```
+
+## Subcomponents
 
 Subcomponents are also feasible.
 They make up part of both the VDOM and the rendering:
 
 ```{literalinclude} ../../examples/usage/componentsH.py
-:start-after: start-after
-:end-before: end-before
+---
+start-after: from viewdom
+end-before: def test
+---
 ```
 
-Architectural Note
-==================
+## Architectural Note
 
 Components and subcomponents are a useful feature to users of some UI layer, as well as creators of that layer.
 They are also, though, an interesting architectural plug point.

@@ -1,3 +1,7 @@
+"""
+Inserting a variable from the scope.
+"""
+
 from viewdom import html, render
 
 name = 'viewdom'

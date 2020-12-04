@@ -1,3 +1,7 @@
+"""
+Get a variable from an import.
+"""
+
 from viewdom import html, render
 from .variables import name
 

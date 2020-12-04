@@ -1,3 +1,7 @@
+"""
+Components can be any kind of callable.
+"""
+
 from dataclasses import dataclass
 
 from viewdom import html, render

@@ -1,3 +1,7 @@
+"""
+Get a variable from a passed-in ``prop``.
+"""
+
 from viewdom import html, render
 
 

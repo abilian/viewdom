@@ -1,3 +1,7 @@
+"""
+Insert a variable from the local scope.
+"""
+
 from viewdom import html, render
 
 

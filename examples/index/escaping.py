@@ -1,3 +1,7 @@
+"""
+Markup gets escaped when inserted.
+"""
+
 from viewdom import html, render
 
 body = '<span>Escaping</span>'

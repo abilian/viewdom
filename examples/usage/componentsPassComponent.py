@@ -1,3 +1,7 @@
+"""
+Pass a component as a prop value.
+"""
+
 from viewdom import html, render
 
 

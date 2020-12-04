@@ -5,20 +5,32 @@ It can be frustrating, not to mention brittle, to pass data all the way from the
 Intermediate components don't use the data.
 Why should they have to depend on them?
 
-```{literalinclude} ../../examples/usage/context.py
-:end-before: end-before
-```
+## The Hard Way
 
 In this example the `site` object is passed through the `App` component, then `Nav`, to get it to `NavHeading`.
 Neither `App` nor `Nav` need anything from `site`.
 They are just transits.
+
+
+```{literalinclude} ../../examples/usage/context.py
+---
+start-at: from viewdom
+end-before: def test
+---
+```
+
+## The Easy Way: Contexts
 
 React has addressed this with a number of technologies over the years, including [Context](https://reactjs.org/docs/context.html) and [Hooks](https://reactjs.org/docs/hooks-intro.html).
 `viewdom` has a similar "context" construct, where you can wrap a part of the component tree, shove values into the rendering, and pluck them out later on.
 We can use this to make `site` available anywhere in the tree:
 
 ```{literalinclude} ../../examples/usage/contextA.py
-:end-before: end-before
+---
+start-at: from viewdom
+end-before: def test
+emphasize-lines: 5-5, 37-37
+---
 ```
 
 ## How It Works

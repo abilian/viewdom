@@ -1,3 +1,7 @@
+"""
+Avoid passing data down long trees as props by using a Context API.
+"""
+
 from viewdom import html, render, use_context, Context
 
 title = 'My Todos'

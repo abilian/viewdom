@@ -1,3 +1,7 @@
+"""
+The prop has a default value, so caller doesn't have to provide it.
+"""
+
 from viewdom import html, render
 
 

@@ -1,0 +1,17 @@
+"""
+Show the component in the VDOM.
+"""
+
+from viewdom import html, VDOMNode
+
+
+def Heading():
+    return html('<h1>My Title</h1>')
+
+
+vdom = html('<{Heading} />')
+expected = VDOMNode(tag=Heading, props={}, children=[])
+
+
+def test():
+    return expected, vdom

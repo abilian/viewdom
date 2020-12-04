@@ -1,3 +1,7 @@
+"""
+Getting a doctype into the rendered output is a bit tricky.
+"""
+
 from markupsafe import Markup
 
 from viewdom import html, render

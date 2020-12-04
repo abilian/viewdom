@@ -1,3 +1,7 @@
+"""
+Break a large template into smaller, re-usable component.
+"""
+
 from viewdom import html, render
 
 title = 'My Todos'

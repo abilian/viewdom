@@ -1,3 +1,7 @@
+"""
+Call a function from inside a template expression.
+"""
+
 from viewdom import html, render
 
 

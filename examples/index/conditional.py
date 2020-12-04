@@ -1,3 +1,7 @@
+"""
+Only show some templating blocks in certain conditions.
+"""
+
 from viewdom import html, render
 
 message = 'Say Howdy'

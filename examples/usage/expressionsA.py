@@ -1,3 +1,7 @@
+"""
+Python operation in the expression.
+"""
+
 from viewdom import html, render
 
 name = 'viewdom'

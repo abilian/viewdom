@@ -1,7 +1,12 @@
+"""
+Loop over a sequence and generate nodes.
+"""
+
 from viewdom import html, render
 
 message = 'Hello'
 names = ['World', 'Universe']
+
 result = render(
     html(
         '''
@@ -14,7 +19,6 @@ result = render(
 '''
     )
 )
-
 expected = '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
 
 

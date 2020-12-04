@@ -1,3 +1,7 @@
+"""
+Prop values from scope variables.
+"""
+
 from viewdom import html, render
 
 

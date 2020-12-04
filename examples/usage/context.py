@@ -1,3 +1,7 @@
+"""
+Use the Context API to avoid passing values down a long tree.
+"""
+
 from viewdom import html, render
 
 

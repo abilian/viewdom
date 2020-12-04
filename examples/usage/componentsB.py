@@ -1,3 +1,7 @@
+"""
+Use ``children`` as a built-in "prop".
+"""
+
 from viewdom import html, render
 
 

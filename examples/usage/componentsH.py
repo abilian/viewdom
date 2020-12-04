@@ -1,3 +1,7 @@
+"""
+Subcomponents.
+"""
+
 from viewdom import html, render
 
 title = 'My Todos'

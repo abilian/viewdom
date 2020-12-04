@@ -1,3 +1,7 @@
+"""
+Simple function component that returns a VDOM.
+"""
+
 from viewdom import html, render
 
 

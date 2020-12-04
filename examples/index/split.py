@@ -1,3 +1,7 @@
+"""
+Split generating and rendering into two steps.
+"""
+
 from viewdom import html, render
 
 vdom = html('<div>Hello World</div>')

@@ -1,3 +1,7 @@
+"""
+Optional props.
+"""
+
 from viewdom import html, render
 
 

@@ -1,3 +1,7 @@
+"""
+Simplest example of generating a static vdom, no variables.
+"""
+
 from viewdom import VDOMNode, html
 
 # Make a VDOM
