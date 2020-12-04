@@ -13,4 +13,4 @@ expected = '<h1>Show?</h1>Say Howdy'
 
 
 def test():
-    assert expected == result
+    return expected, result

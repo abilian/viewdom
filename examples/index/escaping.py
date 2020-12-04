@@ -6,4 +6,4 @@ expected = '<div>&lt;span&gt;Escaping&lt;/span&gt;</div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

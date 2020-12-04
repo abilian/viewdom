@@ -18,4 +18,4 @@ expected = '<body><h1>Default Heading</h1></body>'
 
 
 def test():
-    assert expected == result
+    return expected, result

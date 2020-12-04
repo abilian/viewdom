@@ -11,4 +11,4 @@ expected = '<ul><li>First</li><li>Second</li></ul>'
 
 
 def test():
-    assert expected == result
+    return expected, result

@@ -106,4 +106,5 @@ from examples.usage import (
     ],
 )
 def test_examples(target):
-    target.test()
+    expected, actual = target.test()
+    assert expected == actual

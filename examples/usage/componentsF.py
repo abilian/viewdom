@@ -10,4 +10,4 @@ expected = '<h1>My Title</h1><div>Child</div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

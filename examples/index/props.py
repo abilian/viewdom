@@ -11,4 +11,4 @@ expected = '<div id="id-42" title="viewdom">Hello viewdom</div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

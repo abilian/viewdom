@@ -8,4 +8,4 @@ expected = '<div><span>No Escaping</span></div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

@@ -6,4 +6,4 @@ expected = '<div>Hello 4</div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

@@ -1,12 +1,9 @@
 from viewdom import html, render
 
-vdom = html('''<div>Hello <span>World<em>!</em></span></div>''')
-# VDOM(tag='div', props={}, children=['Hello ', VDOM(tag='span', props={}, \
-# children=['World', VDOM(tag='em', props={}, children=['!'])])])
-
+vdom = html('<div>Hello <span>World<em>!</em></span></div>')
 result = render(vdom)
-# '<div>Hello <span>World<em>!</em></span></div>'
 expected = '<div>Hello <span>World<em>!</em></span></div>'
 
+
 def test():
-    assert expected == result
+    return expected, result

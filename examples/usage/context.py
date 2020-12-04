@@ -42,4 +42,4 @@ expected = '<nav><h1>My Site</h1></nav><h2>My Page</h2>'
 
 
 def test():
-    assert expected == result
+    return expected, result

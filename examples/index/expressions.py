@@ -7,4 +7,4 @@ expected = '<div>Hello VIEWDOM</div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

@@ -6,9 +6,8 @@ def main(name):
 
 
 result = main(name='viewdom')
-# '<div>Hello viewdom</div>'
 expected = '<div>Hello viewdom</div>'
 
 
 def test():
-    assert expected == result
+    return expected, result

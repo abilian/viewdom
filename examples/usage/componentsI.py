@@ -28,4 +28,4 @@ expected = '<h1>My Todos</h1><ul><li>first</li></ul>'
 
 
 def test():
-    assert expected == result
+    return expected, result

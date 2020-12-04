@@ -14,4 +14,4 @@ expected = '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
 
 
 def test():
-    assert expected == result
+    return expected, result

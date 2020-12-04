@@ -26,7 +26,7 @@ Let's first generate a VDOM:
 
 ```{literalinclude} ../examples/index/vdom.py
 ---
-start-after: start-after
+end-before: def test
 ---
 ```
 
@@ -34,7 +34,8 @@ This time we'll do both in one line: use `html` to generate a VDOM, then `render
 
 ```{literalinclude} ../examples/index/render.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
 ---
 ```
 
@@ -42,7 +43,8 @@ If you'd like, you can split those into two steps:
 
 ```{literalinclude} ../examples/index/split.py
 ---
-start-after: start-after
+start-after: from viewdom
+end-before: def test
 ---
 ```
 
