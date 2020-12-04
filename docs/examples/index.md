@@ -14,5 +14,3 @@ looping
 components
 context
 ```
-
-

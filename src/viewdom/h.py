@@ -123,7 +123,7 @@ def render_gen(value):
                 yield from render_gen(children)
                 yield f'</{escape(tag)}>'
             elif tag.lower() in VOIDS:
-                yield f'/>'
+                yield '/>'
             else:
                 yield f'></{tag}>'
         elif item not in (True, False, None):

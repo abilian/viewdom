@@ -97,5 +97,3 @@ You've now forked a mini-universe.
 And you are also relying on an implicit soup of state.
 
 With a smarter component approach, you have much smaller units to change and you can register overrides for replacing a unit.
-
-

@@ -23,7 +23,7 @@ result = render(
   <{Context} prefix="Item: ">
       <h1>{title}</h1>
       <{TodoList} these_todos={todos} />
-  <//>    
+  <//>
 '''
     )
 )

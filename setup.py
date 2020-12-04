@@ -1,4 +1,3 @@
-# type: ignore
 from setuptools import setup, find_packages
 
 
@@ -14,33 +13,29 @@ requires = [
     'tagged',
     'htm',
     'MarkupSafe',
-    'typing_extensions>=3.7.4;python_version<"3.8"'
+    'typing_extensions>=3.7.4;python_version<"3.8"',
 ]
 
-docs_require = [
-    'Sphinx',
-    'sphinx-book-theme',
-    'myst-parser'
-]
+docs_require = ['Sphinx', 'sphinx-book-theme', 'myst-parser']
 
 tests_require = [
     'pytest',
-    'pytest-mock',
-    'pytest-cov',
+]
+
+dev_require = [
     'mypy',
-    'pytest-mypy',
-    'py',
     'coverage',
     'tox',
     'black',
     'flake8',
+    'twine',
+    'pre-commit',
+    'check-manifest',
 ]
 
 setup(
     name='viewdom',
-    description=(
-        'View layer for Python VDOMs'
-    ),
+    description=('View layer for Python VDOMs'),
     version='0.4.0',
     long_description=readme + '\n\n' + changes,
     long_description_content_type='text/x-rst',
@@ -53,7 +48,11 @@ setup(
     include_package_data=True,
     python_requires='>=3.6',
     install_requires=requires,
-    extras_require={'docs': docs_require, 'tests': tests_require},
+    extras_require=dict(
+        docs=docs_require,
+        tests=tests_require,
+        dev=dev_require,
+    ),
     zip_safe=False,
     keywords=','.join(
         [

@@ -60,7 +60,7 @@ def test_render_safe_value():
 
 
 def test_void():
-    """ Convert <img></img> to <img/>
+    """Convert <img></img> to <img/>
 
     See this for discussion of non-void elements which can't be
     self-closed:
@@ -74,7 +74,7 @@ def test_void():
 
 
 def test_non_void():
-    """ Don't convert <i class="icon"></i> to <i class="icon"/>
+    """Don't convert <i class="icon"></i> to <i class="icon"/>
 
     See this for discussion of non-void elements which can't be
     self-closed:

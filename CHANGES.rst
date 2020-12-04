@@ -6,6 +6,8 @@ Unreleased
 
 - Change typing: ``VDOM`` is now the list/node at the top, ``VDOMNode`` is the factory and an individual triple
 
+- Re-organize the examples
+
 0.4.0
 =====
 

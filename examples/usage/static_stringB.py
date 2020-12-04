@@ -6,9 +6,7 @@ from viewdom import html, VDOMNode
 
 result = html('<div class="container">Hello World</div>')
 expected = VDOMNode(
-    tag='div',
-    props={'class': 'container'},
-    children=['Hello World']
+    tag='div', props={'class': 'container'}, children=['Hello World']
 )
 
 

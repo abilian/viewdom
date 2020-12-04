@@ -17,9 +17,11 @@ def main():
     todos = ['first']
     todo_list = TodoList(todos)
     return render(
-        html('''
+        html(
+            '''
       <{TodoApp} title="My Todos" todolist={todo_list} />
-    ''')
+    '''
+        )
     )
 
 

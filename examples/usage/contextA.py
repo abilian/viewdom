@@ -33,11 +33,13 @@ def main():
     page = dict(title='My Page')
 
     return render(
-        html('''
+        html(
+            '''
         <{Context} site={site}>
             <{App} page={page} />
         <//>
-''')
+'''
+        )
     )
 
 

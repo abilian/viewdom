@@ -18,10 +18,12 @@ def TodoList(todos):
 def main():
     todos = ['first']
     return render(
-        html('''
+        html(
+            '''
       <h1>{title}</h1>
       <{TodoList} todos={todos} />
-    ''')
+    '''
+        )
     )
 
 

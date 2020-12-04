@@ -10,7 +10,7 @@ def Heading():
 
 
 vdom = html('<{Heading} />')
-expected = VDOMNode(tag=Heading, props={}, children=[])
+expected = VDOMNode(tag=Heading, props={}, children=[])  # type: ignore
 
 
 def test():

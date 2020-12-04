@@ -35,9 +35,11 @@ def main():
     page = dict(title='My Page')
 
     return render(
-        html('''
+        html(
+            '''
         <{App} site={site} page={page} />
-''')
+'''
+        )
     )
 
 

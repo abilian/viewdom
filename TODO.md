@@ -26,8 +26,7 @@
 
 ## Done
 
-- When a block has no child nodes, e.g. `<i class="fab fa-lg fa-github-alt"></i>`, 
+- When a block has no child nodes, e.g. `<i class="fab fa-lg fa-github-alt"></i>`,
   don't collapse it
 
 - Update the sphinx book theme to latest
-

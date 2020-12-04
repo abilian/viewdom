@@ -66,7 +66,7 @@ end-before: def test
 ---
 ```
 
-`children` is a keyword argument that is available to components. 
+`children` is a keyword argument that is available to components.
 Note how the component closes with `<//>` when it contains nested children, as opposed to the self-closing form in the first example.
 
 ## Expressions as Prop Values
