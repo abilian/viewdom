@@ -6,7 +6,7 @@ from collections import ChainMap
 from collections.abc import Iterable, ByteString
 from dataclasses import dataclass
 from inspect import signature, Parameter
-from typing import Union, Mapping, List, Callable
+from typing import Union, Mapping, List, Callable, Sequence
 
 from htm import htm_parse, htm_eval
 from markupsafe import escape

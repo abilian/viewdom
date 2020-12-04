@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ==========
 
+- Allow VDOM to contain any kind of sequence
+
+0.4.1
+=====
+
 - Change typing: ``VDOM`` is now the list/node at the top, ``VDOMNode`` is the factory and an individual triple
 
 - Re-organize the examples
