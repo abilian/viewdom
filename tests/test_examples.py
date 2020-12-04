@@ -35,5 +35,5 @@ from examples.index import (
         context,
     ],
 )
-def test_docs_index(target):
-    assert target.expected == target.result
+def test_examples(target):
+    target.test()

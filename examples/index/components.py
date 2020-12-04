@@ -1,8 +1,5 @@
 from viewdom import html, render
 
-expected = '<h1>My Todos</h1><ul><li>first</li></ul>'
-
-# start-after
 title = 'My Todos'
 todos = ['first']
 
@@ -23,4 +20,8 @@ result = render(
 '''
     )
 )
-# '<h1>My Todos</h1><ul><li>first</li></ul>'
+expected = '<h1>My Todos</h1><ul><li>first</li></ul>'
+
+
+def test():
+    assert expected == result

@@ -1,8 +1,5 @@
 from viewdom import html, render
 
-expected = '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
-
-# start-after
 message = 'Hello'
 names = ['World', 'Universe']
 result = render(
@@ -17,4 +14,9 @@ result = render(
 '''
     )
 )
-# '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
+
+expected = '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
+
+
+def test():
+    assert expected == result

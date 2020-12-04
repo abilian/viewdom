@@ -6,6 +6,8 @@
 
 ## Next
 
+- Write some text for an examples page
+- For each example, link to the actual example file
 - Write some text for usage page.
 - flake8, mypy, black on examples
 - tox that matches others

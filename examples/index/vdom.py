@@ -1,9 +1,8 @@
-from viewdom import VDOMNode
-
-expected = VDOMNode(tag='div', props={}, children=['Hello World'])
-
-# start-after
-from viewdom import html
+from viewdom import VDOMNode, html
 
 result = html('''<div>Hello World</div>''')
-# VDOM(tag='div', props={}, children=['Hello World'])
+expected = VDOMNode(tag='div', props={}, children=['Hello World'])
+
+
+def test():
+    assert expected == result

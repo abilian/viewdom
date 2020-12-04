@@ -2,10 +2,7 @@ from dataclasses import dataclass
 
 from viewdom import html, render
 
-expected = '<div>Hello viewdom</div>'
 
-
-# start-after
 @dataclass
 class Greeting:
     name: str
@@ -16,4 +13,8 @@ class Greeting:
 
 greeting = Greeting(name='viewdom')
 result = render(html('<div><{greeting} /></div>'))
-# '<div>Hello viewdom</div>'
+expected = '<div>Hello viewdom</div>'
+
+
+def test():
+    assert expected == result
