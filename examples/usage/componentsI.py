@@ -1,8 +1,5 @@
 from viewdom import html, render
 
-# start-after
-title = 'My Todos'
-
 
 def Todo(label):
     return html('<li>{label}</li>')
@@ -18,18 +15,17 @@ def TodoApp(title, todolist):
 
 def main():
     todos = ['first']
-    # noinspection PyUnusedLocal
     todo_list = TodoList(todos)
     return render(
-        html(
-            '''
+        html('''
       <{TodoApp} title="My Todos" todolist={todo_list} />
-    '''
-        )
+    ''')
     )
 
 
 result = main()
-# '<h1>My Todos</h1><ul><li>first</li></ul>'
-# end-before
 expected = '<h1>My Todos</h1><ul><li>first</li></ul>'
+
+
+def test():
+    assert expected == result

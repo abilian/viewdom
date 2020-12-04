@@ -1,6 +1,5 @@
 from viewdom import html, render
 
-# start-after
 title = 'My Todos'
 
 
@@ -15,16 +14,16 @@ def TodoList(todos):
 def main():
     todos = ['first']
     return render(
-        html(
-            '''
+        html('''
       <h1>{title}</h1>
       <{TodoList} todos={todos} />
-    '''
-        )
+    ''')
     )
 
 
 result = main()
-# '<h1>My Todos</h1><ul><li>first</li></ul>'
-# end-before
 expected = '<h1>My Todos</h1><ul><li>first</li></ul>'
+
+
+def test():
+    assert expected == result

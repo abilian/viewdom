@@ -1,12 +1,13 @@
 from viewdom import html, render
 
 
-# start-after
 def Heading(children):
     return html('<h1>My Title</h1><div>{children}</div>')
 
 
-result = render(html('<{Heading} >Hi<//>'))
-# '<h1>My Title</h1><div>Hi</div>'
-# end-before
+result = render(html('<{Heading}>Hi<//>'))
 expected = '<h1>My Title</h1><div>Hi</div>'
+
+
+def test():
+    assert expected == result

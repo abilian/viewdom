@@ -8,5 +8,8 @@ vdom = html('''{doctype}<div>Hello World</div>''')
 
 result = render(vdom)
 # '<!DOCTYPE html>\n<div>Hello World</div>'
-# end-before
 expected = '<!DOCTYPE html>\n<div>Hello World</div>'
+
+
+def test():
+    assert expected == result

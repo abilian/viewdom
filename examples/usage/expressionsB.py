@@ -8,5 +8,8 @@ def make_bigly(name: str) -> str:
 name = 'viewdom'
 result = render(html('<div>Hello {make_bigly(name)}</div>'))
 # '<div>Hello BIGLY: VIEWDOM</div>'
-# end-before
 expected = '<div>Hello BIGLY: VIEWDOM</div>'
+
+
+def test():
+    assert expected == result

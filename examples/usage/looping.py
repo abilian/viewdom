@@ -14,6 +14,8 @@ result = render(
 '''
     )
 )
-# '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
-# end-before
 expected = '<ul title="Hello"><li>World</li><li>Universe</li></ul>'
+
+
+def test():
+    assert expected == result

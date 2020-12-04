@@ -31,15 +31,15 @@ def main():
     page = dict(title='My Page')
 
     return render(
-        html(
-            '''
+        html('''
         <{App} site={site} page={page} />
-'''
-        )
+''')
     )
 
 
 result = main()
-# '<nav><h1>My Site</h1></nav><h2>My Page</h2>'
-# end-before
 expected = '<nav><h1>My Site</h1></nav><h2>My Page</h2>'
+
+
+def test():
+    assert expected == result

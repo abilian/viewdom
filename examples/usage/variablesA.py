@@ -8,5 +8,8 @@ def main():
 
 result = main()
 # '<div>Hello viewdom</div>'
-# end-before
 expected = '<div>Hello viewdom</div>'
+
+
+def test():
+    assert expected == result

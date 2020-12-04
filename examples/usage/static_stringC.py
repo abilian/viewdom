@@ -5,5 +5,8 @@ vdom = html('''<div class="container{1}">Hello World</div>''')
 
 result = render(vdom)
 # '<div class="container1">Hello World</div>'
-# end-before
 expected = '<div class="container1">Hello World</div>'
+
+
+def test():
+    assert expected == result

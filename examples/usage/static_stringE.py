@@ -5,5 +5,8 @@ vdom = html('''<div editable={True}>Hello World</div>''')
 
 result = render(vdom)
 # '<div editable>Hello World</div>'
-# end-before
 expected = '<div editable>Hello World</div>'
+
+
+def test():
+    assert expected == result

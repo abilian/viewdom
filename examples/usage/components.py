@@ -6,8 +6,9 @@ def Heading():
 
 
 vdom = html('<{Heading} />')
-# VDOM(tag=<function Heading at 0x10e77db80>, props={}, children=[])
 result = render(vdom)
-# '<h1>My Title</h1>'
-# end-before
 expected = '<h1>My Title</h1>'
+
+
+def test():
+    assert expected == result
