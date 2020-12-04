@@ -41,7 +41,7 @@ class VDOMNode:
     children: List[Union[str, VDOMNode]]
 
 
-VDOM = Union[List[VDOMNode], VDOMNode]
+VDOM = Union[Sequence[VDOMNode], VDOMNode]
 
 
 def htm(func=None, *, cache_maxsize=128) -> Callable[[str], VDOM]:

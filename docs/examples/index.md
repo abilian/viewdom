@@ -1,6 +1,6 @@
 # Examples
 
-Let's take a look at some common templating patterns, implemented in ``viewdom``.
+Let's take a look at some common templating patterns, implemented in `viewdom`.
 
 ```{toctree}
 ---

@@ -36,7 +36,7 @@ dev_require = [
 setup(
     name='viewdom',
     description=('View layer for Python VDOMs'),
-    version='0.4.0',
+    version='0.4.1',
     long_description=readme + '\n\n' + changes,
     long_description_content_type='text/x-rst',
     author='Paul Everitt',
