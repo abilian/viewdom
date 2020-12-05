@@ -25,6 +25,7 @@ tests_require = [
 dev_require = [
     'mypy',
     'coverage',
+    'pytest-coverage',
     'tox',
     'black',
     'flake8',
@@ -49,19 +50,10 @@ setup(
     python_requires='>=3.6',
     install_requires=requires,
     extras_require=dict(
-        docs=docs_require,
-        tests=tests_require,
-        dev=dev_require,
+        docs=docs_require, tests=tests_require, dev=dev_require,
     ),
     zip_safe=False,
-    keywords=','.join(
-        [
-            'web',
-            'html',
-            'components',
-            'templates',
-        ]
-    ),
+    keywords=','.join(['web', 'html', 'components', 'templates',]),
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

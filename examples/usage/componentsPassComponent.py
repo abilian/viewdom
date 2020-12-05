@@ -9,7 +9,7 @@ def DefaultHeading():
     return html('<h1>Default Heading</h1>')
 
 
-def OtherHeading():
+def OtherHeading():  # pragma: nocover
     return html('<h1>Other Heading</h1>')
 
 

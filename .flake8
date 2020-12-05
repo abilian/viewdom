@@ -9,6 +9,9 @@ ignore =
     W503
     # W504: line break after binary operator (flake8 is not PEP8 compliant)
     W504
+    # E231 missing whitespace after ','
+    E231
+
 show-source = True
 exclude =
     examples

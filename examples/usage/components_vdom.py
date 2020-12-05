@@ -6,7 +6,7 @@ from viewdom import html, VDOMNode
 
 
 def Heading():
-    return html('<h1>My Title</h1>')
+    return html('<h1>My Title</h1>')  # pragma: nocover
 
 
 vdom = html('<{Heading} />')

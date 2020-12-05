@@ -12,7 +12,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_static_path = ['_static']
 html_theme_options = dict(
     extra_footer='Theme by the <a href="https://ebp.jupyterbook.org">'
-                 + 'Executable Book Project</a>.',
+    + 'Executable Book Project</a>.',
     repository_url='https://github.com/pauleveritt/viewdom',
     use_repository_button=True,
 )
@@ -20,10 +20,6 @@ html_css_files = [
     'custom.css',
 ]
 html_sidebars = {
-    "**": [
-        'subtitle.html',
-        'sidebar-search-bs.html',
-        'sbt-sidebar-nav.html',
-    ]
+    "**": ['subtitle.html', 'sidebar-search-bs.html', 'sbt-sidebar-nav.html',]
 }
 myst_admonition_enable = True
